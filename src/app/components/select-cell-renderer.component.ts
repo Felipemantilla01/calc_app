@@ -165,17 +165,17 @@ export class AutoCompleteComponent implements ICellEditorAngularComp, AfterViewI
 	}
 
 	updateFilter() {
-		// this.columnFilter.setModel({
-		// 	type: 'startsWith',
-		// 	filter: this.inputValue,
-		// });
-		// this.columnFilter.onFilterChanged();
-		// if(this.gridApi.getDisplayedRowAtIndex(0)) {
-		// 	this.gridApi.getDisplayedRowAtIndex(0).setSelected(true);
-		// 	this.gridApi.ensureIndexVisible(0, 'top');
-		// } else {
-		// 	this.gridApi.deselectAll();
-		// }
+		this.columnFilter.setModel({
+			type: 'startsWith',
+			filter: this.inputValue,
+		});
+		this.columnFilter.onFilterChanged();
+		if(this.gridApi.getDisplayedRowAtIndex(0)) {
+			this.gridApi.getDisplayedRowAtIndex(0).setSelected(true);
+			this.gridApi.ensureIndexVisible(0, 'top');
+		} else {
+			this.gridApi.deselectAll();
+		}
 	}
 
 	navigateGrid() {
